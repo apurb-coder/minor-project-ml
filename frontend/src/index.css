@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap") * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.App.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.App video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.text{
+  margin-bottom: 35px;
+}
+
+.home span{
+  font-family: "Fira Code", monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  margin: 10px;
+}
+
+.home button {
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  font-style: normal;
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  color: #024361;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+
+
+.model {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.model textarea {
+  font-family: "Fira Code", monospace;
+  font-weight: 450;
+  font-style: normal;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.model textarea:focus {
+  outline: none;
+}
+
+.model button {
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  font-style: normal;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: #024361;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+
+.rec {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+}
+
+.rec.mood {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.rec.suggestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
