@@ -25,8 +25,6 @@ const Model = () => {
       <textarea
         name="thought"
         id="thought"
-        cols="50"
-        rows="7"
         placeholder={text}
         onChange={(e) => setThought(e.target.value)}
       />
