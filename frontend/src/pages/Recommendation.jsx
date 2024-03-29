@@ -4,6 +4,9 @@ import spotifylogo from "../assets/Spotify_Logo_CMYK_Green.png"
 import { redirect } from 'react-router-dom';
 
 const Recommendation = () => {
+  const redirect = (link) => {
+    window.location.href = link;
+  };
   const [youtubelink, setYoutubelink] = useState("https://www.youtube.com/");
   const [spotifylink, setSpotifylink] = useState("https://open.spotify.com/");
   return (
@@ -14,16 +17,15 @@ const Recommendation = () => {
       <div className="flex flex-col justify-center  p-[1.25rem]">
         <h3 className="text-xl">Recommendation</h3>
         <div className="mt-9 flex">
-          <div className="mr-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer">
-            <a href={youtubelink}>
-              <img src={ytlogo} alt="yt logo" className="h-4" />
-            </a>
+          <div className="mr-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer" onClick={() => redirect(youtubelink)}>
+            <img src={ytlogo} alt="yt logo" className="h-4" />
           </div>
 
-          <div className="ml-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer">
-            <a href={spotifylink}>
-              <img src={spotifylogo} alt="yt logo" className="h-5" />
-            </a>
+          <div
+            className="ml-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer"
+            onClick={() => redirect(spotifylink)}
+          >
+            <img src={spotifylogo} alt="yt logo" className="h-5" />
           </div>
         </div>
       </div>
