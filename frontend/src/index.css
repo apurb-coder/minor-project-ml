@@ -103,6 +103,7 @@ body {
   .text{
     flex-direction: column;
   }
+  
 }
 
 .model textarea {
