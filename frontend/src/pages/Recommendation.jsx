@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import ytlogo from "../assets/youtubelogo.png"
 import spotifylogo from "../assets/Spotify_Logo_CMYK_Green.png"
-import { redirect } from 'react-router-dom';
 
 const Recommendation = () => {
   const redirect = (link) => {
