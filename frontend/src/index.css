@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap");
- * {
+* {
   margin: 0;
   padding: 0;
 }
@@ -39,7 +39,7 @@ body {
   z-index: -1;
 }
 
-.home{
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,24 +47,22 @@ body {
   padding: 20px;
 }
 
-.text{
+.text {
   margin-bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  
 }
 
-
-
-.home span{
+.home span {
   font-family: "Fira Code", monospace;
   font-size: 2rem;
   font-weight: 600;
   font-style: normal;
   color: #fff;
   margin: 10px;
+  text-align: center;
 }
 
 .home button {
@@ -81,8 +79,6 @@ body {
   margin-top: 20px;
 }
 
-
-
 .model {
   display: flex;
   flex-direction: column;
@@ -90,8 +86,23 @@ body {
   align-items: center;
   background-color: #fff;
   padding: 20px;
+  margin: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .model {
+    width: 80%;
+  }
+
+  .model textarea{
+    width: 100%;
+  }
+
+  .text{
+    flex-direction: column;
+  }
 }
 
 .model textarea {
@@ -101,6 +112,7 @@ body {
   border: none;
   padding: 10px;
   margin: 10px;
+  resize: none;
 }
 
 .model textarea:focus {
@@ -119,9 +131,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  
 }
-
 
 .rec {
   font-family: "Fira Code", monospace;
@@ -145,5 +155,3 @@ body {
   align-items: center;
   padding: 20px;
 }
-
-
