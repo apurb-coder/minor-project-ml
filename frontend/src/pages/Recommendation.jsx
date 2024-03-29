@@ -22,7 +22,7 @@ const Recommendation = () => {
 
           <div className="ml-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer">
             <a href={spotifylink}>
-              <img src={spotifylogo} alt="yt logo" className="h-4" />
+              <img src={spotifylogo} alt="yt logo" className="h-5" />
             </a>
           </div>
         </div>
