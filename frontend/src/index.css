@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +10,8 @@
 
 body {
   background-color: #000;
+  font-family: "Fira Code", monospace;
+  color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +45,7 @@ body {
   z-index: -1;
 }
 
-.home {
+/* .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,4 +161,4 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
+} */

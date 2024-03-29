@@ -21,7 +21,7 @@ const Model = () => {
   });
 
   return (
-    <div className='model'>
+    <div className="flex flex-col justify-center items-center bg-white p-[1.25rem] m-auto rounded-lg shadow-md w-[80%] md:w-full">
       <textarea
         name="thought"
         id="thought"
@@ -29,8 +29,14 @@ const Model = () => {
         rows="7"
         placeholder={text}
         onChange={(e) => setThought(e.target.value)}
+        className="font-medium border-none p-[1.25rem] m-[1.25rem] resize-none focus:outline-none w-full text-black"
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <button
+        onClick={handleSubmit}
+        className="font-semibold px-5 py-2 m-[1.25rem] border-none bg-[#024361] rounded-md cursor-pointer"
+      >
+        Submit
+      </button>
     </div>
   );
 }

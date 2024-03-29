@@ -12,12 +12,21 @@ const Home = () => {
       loop: {},
     });
   return (
-    <div className="home">
-      <div className="text">
-        <span>{text}</span>
-        <Cursor cursorColor="white" />
+    <div className="flex flex-col justify-center items-center p-[1.5rem]">
+      <div className=" mb-[2.1875rem] flex justify-center items-center m-auto">
+        <span className="text-[2rem] font-semibold m-1 text-center">
+          {text}
+        </span>
+        <div className="hidden md:block">
+          <Cursor cursorColor="white" />
+        </div>
       </div>
-      <button onClick={handleClick}>Start</button>
+      <button
+        onClick={handleClick}
+        className="px-5 py-2 border-none bg-white text-[#024361] rounded-md cursor-pointer mt-[1.25rem]"
+      >
+        Start
+      </button>
     </div>
   );
 }
