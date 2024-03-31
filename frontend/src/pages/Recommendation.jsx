@@ -1,12 +1,15 @@
 import React,{useState} from 'react'
 import ytlogo from "../assets/youtubelogo.png"
 import spotifylogo from "../assets/Spotify_Logo_CMYK_Green.png"
+import { useOutput } from '../context/modelOutputContext'
+
 
 const Recommendation = () => {
   const redirect = (link) => {
     window.location.href = link;
   };
-  const [songname, setSongname] = useState("Song Name");
+
+  const {songname} = useOutput(); // data from context api
   const [youtubelink, setYoutubelink] = useState("https://www.youtube.com/");
   const [spotifylink, setSpotifylink] = useState("https://open.spotify.com/");
   return (
