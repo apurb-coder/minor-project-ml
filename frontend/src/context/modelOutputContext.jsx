@@ -1,6 +1,9 @@
 import { createContext, useContext, useState } from "react";
 
-const modelOutputContext = createContext(""); // default value
+const modelOutputContext = createContext({
+  mood:"Happy",
+  songName:"songname"
+}); // default value
 
 export const useOutput = () => {
   return useContext(modelOutputContext);

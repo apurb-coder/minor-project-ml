@@ -9,7 +9,7 @@ const Recommendation = () => {
     window.location.href = link;
   };
 
-  const {songname,mood} = useOutput(); // data from context api
+  const {songName,mood} = useOutput(); // data from context api
   const [youtubelink, setYoutubelink] = useState("https://www.youtube.com/");
   const [spotifylink, setSpotifylink] = useState("https://open.spotify.com/");
   return (
@@ -18,7 +18,7 @@ const Recommendation = () => {
         <h1 className="text-3xl">Your Mood: {mood}</h1>
       </div>
       <div className="flex flex-col justify-center  p-[1.25rem]">
-        <h3 className="text-xl">Recommendation: {songname}</h3>
+        <h3 className="text-xl">Recommendation: {songName}</h3>
         <div className="mt-9 flex">
           <div className="mr-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer" onClick={() => redirect(youtubelink)}>
             <img src={ytlogo} alt="yt logo" className="h-4" />
