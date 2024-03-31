@@ -9,13 +9,13 @@ const Recommendation = () => {
     window.location.href = link;
   };
 
-  const {songname} = useOutput(); // data from context api
+  const {songname,mood} = useOutput(); // data from context api
   const [youtubelink, setYoutubelink] = useState("https://www.youtube.com/");
   const [spotifylink, setSpotifylink] = useState("https://open.spotify.com/");
   return (
     <div className=" font-medium">
       <div className="flex flex-col justify-center item-center p-[1.25rem]">
-        <h1 className="text-3xl">Your Mood: Happy</h1>
+        <h1 className="text-3xl">Your Mood: {mood}</h1>
       </div>
       <div className="flex flex-col justify-center  p-[1.25rem]">
         <h3 className="text-xl">Recommendation: {songname}</h3>

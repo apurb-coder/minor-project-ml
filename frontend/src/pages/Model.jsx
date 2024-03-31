@@ -7,11 +7,11 @@ import { useOutput } from "../context/modelOutputContext";
 const Model = () => {
   const [thought, setThought] = useState("");
   const navigate = useNavigate();
-  const {setSongName} = useOutput();
+  const {setSongName, setmood} = useOutput(); // context-api data
 
   const handleSubmit = () => {
     console.log(thought);
-    // TODO: call api here on submission and do changes in songname using setSongName()
+    // TODO: call api here on submission and do changes in songname and mood using setSongName(), setMood()
 
     navigate("/result");
   };

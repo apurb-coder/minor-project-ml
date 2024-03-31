@@ -8,9 +8,9 @@ export const useOutput = () => {
 
 export const outputProvider = ({ children }) => {
   const [songName, setSongName] = useState("songname");
-
+  const [mood, setMood] = useState("Happy")
   return (
-    <modelOutputContext.Provider value={{ songName,setSongName }}>
+    <modelOutputContext.Provider value={{ songName,setSongName, mood, setMood }}>
       {children}
     </modelOutputContext.Provider>
   );
