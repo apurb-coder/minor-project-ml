@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import ytlogo from "../assets/youtubelogo.png"
 import spotifylogo from "../assets/Spotify_Logo_CMYK_Green.png"
-import { useOutput } from '../context/modelOutputContext'
+import { useOutput } from '../context/ModelOutputContext.jsx'
 
 
 const Recommendation = () => {

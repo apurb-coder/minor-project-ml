@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTypewriter } from "react-simple-typewriter";
-import { useOutput } from "../context/modelOutputContext";
+import { useOutput } from "../context/ModelOutputContext";
 
 const Model = () => {
   const [thought, setThought] = useState("");
