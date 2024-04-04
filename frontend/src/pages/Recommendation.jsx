@@ -6,9 +6,6 @@ import { useOutput } from '../context/ModelOutputContext.jsx'
 
 
 const Recommendation = () => {
-  const redirect = (link) => {
-    window.location.href = link;
-  };
   const navigate =  useNavigate();
   const {songName,mood,songArtist} = useOutput(); // data from context api
   useEffect(()=>{
@@ -28,19 +25,19 @@ const Recommendation = () => {
       <div className="flex flex-col justify-center  p-[1.25rem]">
         <h3 className="text-xl">Recommended Song: {songName}</h3>
         <div className="mt-9 flex">
-          <div
+          <a
             className="mr-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer"
-            onClick={() => redirect(youtubelink)}
+            href={youtubelink}
           >
             <img src={ytlogo} alt="yt logo" className="h-4" />
-          </div>
+          </a>
 
-          <div
+          <a
             className="ml-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer"
-            onClick={() => redirect(spotifylink)}
+            href={spotifylink}
           >
             <img src={spotifylogo} alt="yt logo" className="h-5" />
-          </div>
+          </a>
         </div>
       </div>
     </div>
