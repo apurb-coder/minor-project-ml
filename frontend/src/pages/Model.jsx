@@ -9,13 +9,16 @@ import axios from "axios"
 const Model = () => {
   const [thought, setThought] = useState("");
   const navigate = useNavigate();
-  const {setSongName, setmood} = useOutput(); // context-api data
-
+  const { setSongName, setMood, setSongArtist } = useOutput(); // context-api data
+  
   const handleSubmit = async() => {
     console.log(thought);
     // TODO: call api here on submission and do changes in songname and mood using setSongName(), setMood()
     const data= await axios.post("http://127.0.0.1:8000/review",{thought});
     console.log(data.data);
+    setMood(data.data.emotion);
+    setSongName(data.data.song.name)
+    setSongArtist(data.data.song.artist)
     navigate("/result");
   };
 

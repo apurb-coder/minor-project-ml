@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ModelOutputContext = createContext({
   mood: "Happy",
   songName: "songname",
+  songArtist: "anyName"
 }); // default value
 
 // will use this hook to access all the states globally
@@ -12,10 +13,18 @@ export const useOutput = () => {
 
 export const OutputProvider = ({ children }) => {
   const [songName, setSongName] = useState("songname");
+  const [songArtist, setSongArtist] = useState("")
   const [mood, setMood] = useState("Happy");
   return (
     <ModelOutputContext.Provider
-      value={{ songName, setSongName, mood, setMood }}
+      value={{
+        songName,
+        setSongName,
+        mood,
+        setMood,
+        songArtist,
+        setSongArtist,
+      }}
     >
       {children}
     </ModelOutputContext.Provider>
