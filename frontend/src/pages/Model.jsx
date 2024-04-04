@@ -3,16 +3,19 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTypewriter } from "react-simple-typewriter";
 import { useOutput } from "../context/ModelOutputContext";
+import axios from "axios"
+
 
 const Model = () => {
   const [thought, setThought] = useState("");
   const navigate = useNavigate();
   const {setSongName, setmood} = useOutput(); // context-api data
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     console.log(thought);
     // TODO: call api here on submission and do changes in songname and mood using setSongName(), setMood()
-
+    const data= await axios.post("http://127.0.0.1:8000/review",{thought});
+    console.log(data.data);
     navigate("/result");
   };
 
