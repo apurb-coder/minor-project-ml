@@ -17,8 +17,8 @@ const Model = () => {
     const data= await axios.post("http://127.0.0.1:8000/review",{thought});
     console.log(data.data);
     setMood(data.data.emotion);
-    setSongName(data.data.song.name)
-    setSongArtist(data.data.song.artist)
+    setSongName(data.data.song["Song Name"]);
+    setSongArtist(data.data.song["Artist Name"]);
     navigate("/result");
   };
 

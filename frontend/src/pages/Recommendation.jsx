@@ -24,6 +24,7 @@ const Recommendation = () => {
       </div>
       <div className="flex flex-col justify-center  p-[1.25rem]">
         <h3 className="text-xl">Recommended Song: {songName}</h3>
+        <h3 className="text-xl">Author Name: {songArtist}</h3>
         <div className="mt-9 flex">
           <a
             className="mr-3 px-5 py-3 bg-white rounded-full w-1/2 flex justify-center items-center hover:cursor-pointer"
